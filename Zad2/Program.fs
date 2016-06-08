@@ -4,17 +4,24 @@
 
 open System
 
+// Antypattern w F#
 let sumList list =
     let mutable result = 0
     for i in list do
         result <- result + i
     result 
 
+// Wersja rekurancyjna
+let rec sumListRec list =
+    match list with
+    | [] -> 0
+    | head :: tail -> head + sumListRec(tail)
+
 [<EntryPoint>]
 let main argv = 
 
     let list = [1; 2; 3]
-    let result = sumList list
+    let result = sumListRec list
 
     Console.WriteLine("There result are " + result.ToString())
 
