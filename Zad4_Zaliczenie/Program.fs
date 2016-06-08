@@ -7,12 +7,14 @@ let potega x n =
        result <- 1
        for i = 1 to n do
          result <- result * x
+    else 
+        raise (System.ArgumentException("Wartość powinna być większa lub równa zeru"))
     result
         
 
 [<EntryPoint>]
 let main argv = 
-    System.Console.WriteLine(potega 2 3)
+    System.Console.WriteLine(potega 2 -3)
 
     Console.ReadLine() |> ignore
 
