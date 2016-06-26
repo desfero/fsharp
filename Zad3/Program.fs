@@ -1,5 +1,5 @@
-﻿// Learn more about F# at http://fsharp.org
-// See the 'F# Tutorial' project for more help.
+// Napisz funkcje w języku F#, zwracająca różne wartości z dwóch list
+
 open System
 
 let rec mem list x = 
